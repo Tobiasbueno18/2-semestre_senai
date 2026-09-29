@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <center><h1>Formulário de Cadastro</h1></center>
+    <p style="font-family: 'Times New Roman', Times, serif;font-style: 20px;color: red;">Realize o cadastro e concorra a a premios</p>
+    <form>
+        <label>Nome Completo</label>
+        <input type = "text" placeholder="Insira seu nome" required/>
+        <br><br>
+        <label>Data de nascimento</label>
+        <input type="date">
+        <br><br>
+        <label>CPF</label>
+        <input type="number"/>
+        <br><br>
+        <label>Você nos indicaria?</label>
+        <input type="number" min="1" max="5" />
+        <br><br>
+        <label>Email</label>
+        <input type="email" placeholder="informe seu email" required/>
+        <br><br>
+        <label>Cor favorita</label>
+        <input type="color"/>
+        <br><br>
+        <label>Em qual volume você ouve música (0 a 100)</label>
+        <input id = "volume" type="range" min="0" max="100" value="50"
+         oninput="atualizarVolume(this.value)" style="accent-color: red;"/>
+        <span id="valor-volume">50</span>
+        <br><br>
+        <fieldset>
+            <legend>Gênero</legend>
+            <input type="radio" name="genero"/>
+            <label>Masculino</label>
+            <input type="radio" name="genero"/>
+            <label>Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Monte seu lanche! 🍔</legend>
+            <input type="checkbox" id="salada" style="accent-color: green;">
+            <label>salada</label>
+            <input type="checkbox" id="hamburger"style="accent-color: brown;">
+            <label>Hamburger</label>
+            <input type="checkbox" id="bacon"style="accent-color: gold;">
+            <label>bacon</label>
+            <input type="checkbox" id="maionese"style="accent-color: green;">
+            <label>Maionese Caseira da Casa</label>
+        </fieldset>
+        <br><br>
+        <label>Informações Adicionais</label>
+        <textarea id="info"></textarea>
+        <br><br>
+        <label>Senha</label>
+        <input type="password">
+        <br><br>
+        <label>Informe sua cidade</label>
+        <select id="Cidade">
+        <option>Jaguariuna</option>
+        <option>Pedreira</option>
+        <option>Amparo</option>
+        <option>Bragança Paulista</option>
+        <option>Serra Negra</option>
+        </select>
+        <br><br>
+        <input type="reset" value="Limpar form">
+        <input type="submit">
+    </form>
+
+    <script>
+        function atualizarVolume(valor){
+        document.getElementById("valor-volume").textContent = valor;
+        }
+    </script>
+
+</body>
+</html>
